@@ -1,0 +1,42 @@
+[user]
+	name = Lucas V. Schuermann
+	email = lucas.v.schuermann@gmail.com
+	signingkey = E8AA29F2F623EAACC7FD3498553C78A267B1E794
+[ui "color"]
+	ui = always
+[color]
+	ui = true
+[mergetool]
+	keepBackup = true
+[merge]
+	tool = nvim -d
+[core]
+	autocrlf = input
+	safecrlf = true
+	excludesfile = /Users/Lucas/.gitignore_global
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = simple
+[pull]
+	ff = only
+[http]
+	postBuffer = 524288000
+[commit]
+	gpgsign = true
+[help]
+	autocorrect = 1
+[github]
+	user = cerrno
+[protocol]
+	version = 2
