@@ -22,7 +22,7 @@
 	sa = "!f() { git stash apply stash^{/$*}; }; f"
 	sl = stash list
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	excludesfile = /Users/Lucas/.gitignore_global
 [filter "media"]
