@@ -10,7 +10,7 @@ abbr -a g git
 abbr -a vimdiff 'nvim -d'
 abbr -a vim nvim
 abbr -a find fd
-abbr -a df dust
+abbr -a du dust
 
 # no prompt greeting for speed
 set fish_greeting
