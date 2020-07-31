@@ -1,2 +1,4 @@
 fish_variables
-coc/.config/coc/extensions/history.json
+coc/.config/coc/history.json
+coc/.config/coc/mru
+coc/.config/coc/extensions/*-data
