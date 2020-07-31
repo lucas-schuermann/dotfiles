@@ -6,7 +6,7 @@ Pull the repository, optionally install package dependencies `./install_deps.sh`
 ```
 $ git clone git@github.com:cerrno/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
-$ stow fish git kitty neovim # plus whatever else you'd like
+$ stow coc fish git kitty neovim
 ```
 
 ## License
