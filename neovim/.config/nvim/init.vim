@@ -4,4 +4,5 @@ let mapleader = "\<Space>"
 
 packadd! dracula
 syntax enable
+set termguicolors
 colorscheme dracula
