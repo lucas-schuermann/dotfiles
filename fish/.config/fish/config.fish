@@ -1,13 +1,15 @@
 abbr -a ping 'prettyping --nolegend'
 abbr -a l 'exa -F'
-abbr -a ls 'exa'
+abbr -a ls exa
 abbr -a ll 'exa -alF'
 abbr -a la 'exa -aF'
 abbr -a e nvim
 abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
-abbr -a vim 'nvim'
+abbr -a vim nvim
+abbr -a find fd
+abbr -a df dust
 
 set fish_greeting
 
@@ -58,7 +60,6 @@ set FISH_CLIPBOARD_CMD "cat"
 # fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
-set -g fish_prompt_pwd_dir_length 3
 
 # use ripgrep for fzf
 set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
