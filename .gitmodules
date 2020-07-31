@@ -1,3 +1,18 @@
 [submodule "neovim/.config/nvim/pack/themes/start/dracula"]
 	path = neovim/.config/nvim/pack/themes/start/dracula
 	url = https://github.com/dracula/vim
+[submodule "neovim/.config/nvim/pack/fzf/start/fzf.vim"]
+	path = neovim/.config/nvim/pack/fzf/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "neovim/.config/nvim/pack/rust.vim/start/rust.vim"]
+	path = neovim/.config/nvim/pack/rust.vim/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "neovim/.config/nvim/pack/vim-go/start/vim-go"]
+	path = neovim/.config/nvim/pack/vim-go/start/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "neovim/.config/nvim/pack/surround.vim/start/vim-surround"]
+	path = neovim/.config/nvim/pack/surround.vim/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "neovim/.config/nvim/pack/nerdtree/start/nerdtree"]
+	path = neovim/.config/nvim/pack/nerdtree/start/nerdtree
+	url = https://github.com/preservim/nerdtree

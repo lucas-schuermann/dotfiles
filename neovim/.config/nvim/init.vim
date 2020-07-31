@@ -6,3 +6,6 @@ packadd! dracula
 syntax enable
 set termguicolors
 colorscheme dracula
+
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
