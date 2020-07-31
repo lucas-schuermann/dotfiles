@@ -1,3 +1,4 @@
+# simple prompt with time, path, git status, and separator
 function fish_prompt
     set -l last_pipestatus $pipestatus
     

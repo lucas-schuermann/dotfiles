@@ -1,4 +1,6 @@
-fish_variables
 coc/.config/coc/history.json
 coc/.config/coc/mru
+# binary
 coc/.config/coc/extensions/*-data
+
+fish/.config/fish/fish_variables

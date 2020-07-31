@@ -1,3 +1,4 @@
+# set default CLI commands
 abbr -a ping 'prettyping --nolegend'
 abbr -a l 'exa -F'
 abbr -a ls exa
@@ -11,13 +12,13 @@ abbr -a vim nvim
 abbr -a find fd
 abbr -a df dust
 
+# no prompt greeting for speed
 set fish_greeting
 
 # https://draculatheme.com/fish
 set -l foreground f8f8f2
 set -l selection  44475a
 set -l comment    6272a4
-
 set -l red    ff5555
 set -l orange ffb86c
 set -l yellow f4f99d
@@ -25,7 +26,6 @@ set -l green  50fa7b
 set -l cyan   8be9fd
 set -l pink   ff79c6
 set -l purple bd93f9
-
 set -g fish_color_autosuggestion $comment
 set -g fish_color_command        $cyan
 set -g fish_color_comment        $comment
