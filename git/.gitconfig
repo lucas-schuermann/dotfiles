@@ -10,6 +10,17 @@
 	keepBackup = true
 [merge]
 	tool = nvim -d
+[alias]
+	c = commit
+	s = status
+	st = status
+	lg = log --oneline
+	last = log -1 HEAD
+	p = push
+	# https://stackoverflow.com/a/11688523/472927
+	ss = "!f() { git stash show stash^{/$*} -p; }; f"
+	sa = "!f() { git stash apply stash^{/$*}; }; f"
+	sl = stash list
 [core]
 	autocrlf = input
 	safecrlf = true
