@@ -11,32 +11,32 @@ abbr -a vim 'nvim'
 
 set fish_greeting
 
-# fish_config Dracula
-set -U fish_color_normal normal
-set -U fish_color_command F8F8F2
-set -U fish_color_quote F1FA8C
-set -U fish_color_redirection 8BE9FD
-set -U fish_color_end 50FA7B
-set -U fish_color_error FFB86C
-set -U fish_color_param FF79C6
-set -U fish_color_comment 6272A4
-set -U fish_color_match --background=brblue
-set -U fish_color_selection white --bold --background=brblack
-set -U fish_color_search_match bryellow --background=brblack
-set -U fish_color_history_current --bold
-set -U fish_color_operator 00a6b2
-set -U fish_color_escape 00a6b2
-set -U fish_color_cwd green
-set -U fish_color_cwd_root red
-set -U fish_color_valid_path --underline
-set -U fish_color_autosuggestion BD93F9
-set -U fish_color_user brgreen
-set -U fish_color_host normal
-set -U fish_color_cancel -r
-set -U fish_pager_color_completion normal
-set -U fish_pager_color_description B3A06D yellow
-set -U fish_pager_color_prefix white --bold --underline
-set -U fish_pager_color_progress brwhite --background=cyan
+# https://draculatheme.com/fish
+set -l foreground f8f8f2
+set -l selection  44475a
+set -l comment    6272a4
+
+set -l red    ff5555
+set -l orange ffb86c
+set -l yellow f4f99d
+set -l green  50fa7b
+set -l cyan   8be9fd
+set -l pink   ff79c6
+set -l purple bd93f9
+
+set -g fish_color_autosuggestion $comment
+set -g fish_color_command        $cyan
+set -g fish_color_comment        $comment
+set -g fish_color_end            $orange
+set -g fish_color_error          $red
+set -g fish_color_escape         $pink
+set -g fish_color_normal         $foreground
+set -g fish_color_operator       $green
+set -g fish_color_param          $purple
+set -g fish_color_quote          $yellow
+set -g fish_color_redirection    $foreground
+set -g fish_color_search_match   --background=$selection
+set -g fish_color_selection      --background=$selection
 
 # general env
 setenv EDITOR nvim
