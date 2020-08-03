@@ -23,7 +23,7 @@
 	sl = stash list
 [core]
 	autocrlf = false
-	excludesfile = /Users/Lucas/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [pull]
