@@ -11,8 +11,6 @@ abbr -a vimdiff 'nvim -d'
 abbr -a vim nvim
 abbr -a find fd
 abbr -a du dust
-# send terminfo when using remote machine so that colors/bindings work
-abbr -a sshk 'kitty +kitten ssh'
 
 # no prompt greeting for speed
 set fish_greeting

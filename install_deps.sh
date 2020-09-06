@@ -7,7 +7,6 @@ fi
 
 # assuming MacOS
 # install config deps
-brew cask install kitty
 brew install fish
 brew install exa
 brew install pyenv
