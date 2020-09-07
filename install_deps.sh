@@ -17,6 +17,7 @@ brew install fzf
 brew install fd
 brew install dust
 brew install prettyping
+brew install llvm
 # install useful key bindings and fuzzy completion for fzf
 $(brew --prefix)/opt/fzf/install
 # set fish as default shell
