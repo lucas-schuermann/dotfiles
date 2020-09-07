@@ -23,6 +23,10 @@ syntax enable
 filetype plugin indent on
 set termguicolors
 colorscheme dracula
+let g:lightline = {
+    \ 'colorscheme': 'dracula',
+    \ }
+
 
 " Package: fzf
 set rtp+=/usr/local/opt/fzf

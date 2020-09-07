@@ -16,3 +16,9 @@
 [submodule "neovim/.config/nvim/pack/nerdtree/start/nerdtree"]
 	path = neovim/.config/nvim/pack/nerdtree/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "neovim/.config/nvim/pack/lightline.vim/start/lightline.vim"]
+	path = neovim/.config/nvim/pack/lightline.vim/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter"]
+	path = neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
