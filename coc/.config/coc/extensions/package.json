@@ -3,7 +3,6 @@
     "coc-clangd": ">=0.4.14",
     "coc-cmake": ">=0.0.2",
     "coc-css": ">=1.2.4",
-    "coc-graphql": ">=0.0.1",
     "coc-html": ">=1.2.4",
     "coc-java": ">=1.4.12",
     "coc-json": ">=1.2.6",
