@@ -80,6 +80,9 @@ setenv CARGO_INCREMENTAL 1
 setenv RUST_BACKTRACE 1
 setenv RUSTFLAGS "-C target-cpu=native"
 
+# c and cpp
+set -x PATH '/usr/local/opt/llvm/bin' $PATH
+
 # python (keep at bottom)
 set PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
