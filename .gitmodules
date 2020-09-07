@@ -25,3 +25,6 @@
 [submodule "neovim/.config/nvim/pack/ack.vim/start/ack.vim"]
 	path = neovim/.config/nvim/pack/ack.vim/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter"]
+	path = neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git

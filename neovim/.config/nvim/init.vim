@@ -13,9 +13,45 @@ set autoindent
 set nocindent
 set mouse=a
 set history=1000
+
+" Sane splits
+set splitright
+set splitbelow
+
+" Proper search
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+
 " Permanent undo
 set undodir=~/.vimdid
 set undofile
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
+" ripgrep
+set grepprg=rg\ --no-heading\ --vimgrep
+set grepformat=%f:%l:%c:%m
+
+" Lightline
+let g:lightline = {
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+        \   'filename': 'LightlineFilename',
+        \   'cocstatus': 'coc#status'
+    \ },
+    \ 'colorscheme': 'dracula',
+    \ }
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
+" Use auocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " Theme
 packadd! dracula
@@ -23,9 +59,6 @@ syntax enable
 filetype plugin indent on
 set termguicolors
 colorscheme dracula
-let g:lightline = {
-    \ 'colorscheme': 'dracula',
-    \ }
 
 " Ack
 let g:ackprg = 'ag --vimgrep --smart-case'
@@ -142,10 +175,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" fzf
-set rtp+=/usr/local/opt/fzf
-
-" ripgrep
-set grepprg=rg\ --no-heading\ --vimgrep
-set grepformat=%f:%l:%c:%m
-
+" Nerdtree
+" open current buffer in file tree
+nmap <leader>n :NERDTreeFind<CR>
