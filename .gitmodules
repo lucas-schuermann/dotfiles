@@ -22,3 +22,6 @@
 [submodule "neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter"]
 	path = neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "neovim/.config/nvim/pack/ack.vim/start/ack.vim"]
+	path = neovim/.config/nvim/pack/ack.vim/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git

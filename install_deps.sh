@@ -15,6 +15,7 @@ brew install neovim --HEAD
 brew install ripgrep
 brew install fzf
 brew install fd
+brew install the_silver_searcher
 brew install dust
 brew install prettyping
 brew install llvm

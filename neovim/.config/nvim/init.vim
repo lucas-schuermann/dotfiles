@@ -27,6 +27,9 @@ let g:lightline = {
     \ 'colorscheme': 'dracula',
     \ }
 
+" Ack
+let g:ackprg = 'ag --vimgrep --smart-case'
+
 " Coc
 " TextEdit might fail if hidden is not set.
 set hidden
