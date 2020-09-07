@@ -20,6 +20,7 @@ set undofile
 " Theme
 packadd! dracula
 syntax enable
+filetype plugin indent on
 set termguicolors
 colorscheme dracula
 
