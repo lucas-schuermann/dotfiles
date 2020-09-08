@@ -32,7 +32,7 @@ elif [ "$(uname)" == "Linux" ]; then
     cargo install du-dust
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    sudo apt install -y nodejs neovim ripgrep fzf fd-find prettyping
+    sudo apt install -y nodejs neovim ripgrep fzf fd-find prettyping clangd
     # set fish as default shell
     # echo /usr/bin/fish | sudo tee -a /etc/shells - unnecessary on ubuntu
     chsh -s /usr/bin/fish
