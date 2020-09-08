@@ -1,6 +1,8 @@
 " Fish doesn't play all that well with others
 set shell=/bin/bash
+
 let mapleader = "\<Space>"
+let g:maplxeader ="\<Space>"
 
 " General config
 syntax on
@@ -11,8 +13,17 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set nocindent
-set mouse=a
+set nowrap
+set nojoinspaces
 set history=1000
+
+" GUI
+set mouse=a
+set ttyfast
+set nofoldenable
+
+" Show annoying hidden characters
+set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 
 " Sane splits
 set splitright
@@ -28,12 +39,79 @@ set gdefault
 set undodir=~/.vimdid
 set undofile
 
-" fzf
+" Leave paste mode when leaving insert mode
+autocmd InsertLeave * set nopaste
+
+" Disable useless help keybinding
+map <F1> <Esc>
+imap <F1> <Esc>
+
+" Decent wildmenu
+" LVSTODO needed?
+set wildmenu
+set wildmode=list:longest
+set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*.o,*.hi,Zend,vendor
+
+" Wrapping options
+set formatoptions=tc " wrap text and comments using textwidth
+set formatoptions+=r " continue comments when pressing ENTER in I mode
+set formatoptions+=q " enable formatting of comments with gq
+set formatoptions+=n " detect lists for formatting
+set formatoptions+=b " auto-wrap in insert mode, and do not wrap old long lines
+
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
+cnoremap %s/ %sm/
+
+" Quick-save
+nmap <leader>w :w<CR>
+
+" Buffer management
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>q :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+nnoremap <leader>. :GFiles<CR>
+nnoremap <leader>, :Buffers<CR>
+
+" fzf 
+" paths to accomodate Homebrew
 set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/bin/fzf
 
 " ripgrep
 set grepprg=rg\ --no-heading\ --vimgrep
 set grepformat=%f:%l:%c:%m
+
+" <leader>s for Rg search
+noremap <leader>s :Rg 
+let g:fzf_layout = { 'down': '~20%' }
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+function! s:list_cmd()
+  let base = fnamemodify(expand('%'), ':h:.:S')
+  return base == '.' ? 'fd --type file --follow' : printf('fd --type file --follow | proximity-sort %s', shellescape(expand('%')))
+endfunction
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
+  \                               'options': '--tiebreak=index'}, <bang>0)
 
 " Lightline
 let g:lightline = {
@@ -59,9 +137,6 @@ syntax enable
 filetype plugin indent on
 set termguicolors
 colorscheme dracula
-
-" Ack
-let g:ackprg = 'ag --vimgrep --smart-case'
 
 " Coc
 " TextEdit might fail if hidden is not set.
@@ -111,6 +186,15 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming.
@@ -154,27 +238,20 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 " Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Nerdtree
+" show hidden files by default
+let g:NERDTreeShowHidden=1
+" open and close file tree
+map <C-n> :NERDTreeToggle<CR>
 " open current buffer in file tree
 nmap <leader>n :NERDTreeFind<CR>
+
+" Nerdcommenter
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1

@@ -28,3 +28,6 @@
 [submodule "neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter"]
 	path = neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule "neovim/.config/nvim/pack/vim-visual-multi/start/vim-visual-multi"]
+	path = neovim/.config/nvim/pack/vim-visual-multi/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
