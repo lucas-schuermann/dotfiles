@@ -77,6 +77,9 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # brew
 set -x PATH '/usr/local/sbin' $PATH
 
+# GCP sdk
+set -x PATH '/Users/Lucas/google-cloud-sdk/bin' $PATH
+
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
 setenv CARGO_INCREMENTAL 1

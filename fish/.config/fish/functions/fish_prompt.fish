@@ -5,8 +5,13 @@ function fish_prompt
     set_color brblack
     echo -n "["(date "+%H:%M")"] "
     
+    # show @hostname only if in a remote session
     set_color yellow
-    echo -n (basename $PWD)
+    if set --query SSH_CLIENT
+        echo -n (basename $PWD)@(hostname)
+    else
+        echo -n (basename $PWD)
+    end
     
     set_color green
     printf '%s ' (__fish_git_prompt)
