@@ -13,4 +13,4 @@ $ stow coc fish git neovim
 
 ## License
 
-[MIT](https://lvs.io/license.txt)
+[MIT](https://lucasschuermann.com/license.txt)
