@@ -77,9 +77,6 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # brew
 set -x PATH '/usr/local/sbin' $PATH
 
-# GCP sdk
-set -x PATH '/Users/Lucas/google-cloud-sdk/bin' $PATH
-
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
 setenv CARGO_INCREMENTAL 1
@@ -96,4 +93,4 @@ set -x PATH $PYENV_ROOT/bin $PATH
 # and `function pyenv` (only for `pyenv shell`)
 set -gx PATH '/Users/Lucas/.pyenv/shims' $PATH
 set -gx PYENV_SHELL fish
-source '/usr/local/Cellar/pyenv/1.2.20/libexec/../completions/pyenv.fish'
+source '/usr/local/Cellar/pyenv/1.2.21/libexec/../completions/pyenv.fish'
