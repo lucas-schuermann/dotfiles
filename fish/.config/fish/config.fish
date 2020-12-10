@@ -53,10 +53,6 @@ setenv TZ "America/New_York"
 #     see http://jugglingbits.wordpress.com/2010/03/24/a-better-less-playing-nice-with-git/
 setenv LESS "-F -X -R"
 
-# Fish should not add things to clipboard when killing
-# See https://github.com/fish-shell/fish-shell/issues/772
-set FISH_CLIPBOARD_CMD "cat"
-
 # fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
