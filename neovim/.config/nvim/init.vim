@@ -126,7 +126,6 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-" LVSTODO show and update based upon LSP changes? similar to cocstatus
 
 " Theme
 packadd! dracula
@@ -143,10 +142,3 @@ map <C-n> :NERDTreeToggle<CR>
 " open current buffer in file tree
 nmap <leader>n :NERDTreeFind<CR>
 
-" Nerdcommenter
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 1

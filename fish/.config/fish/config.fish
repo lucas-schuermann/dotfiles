@@ -4,6 +4,7 @@ abbr -a l 'exa -F'
 abbr -a ls exa
 abbr -a ll 'exa -alF'
 abbr -a la 'exa -aF'
+abbr -a c code  # VSCode default cmd
 abbr -a e nvim
 abbr -a m make
 abbr -a g git

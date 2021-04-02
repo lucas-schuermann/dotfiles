@@ -3,10 +3,10 @@
 if [ "$(uname)" != "Darwin" ]; then
     echo "Running install for MacOS environment"
     # install config deps
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
     brew install exa
     brew install pyenv
-    brew install node
     brew install neovim --HEAD
     brew install ripgrep
     brew install fzf
@@ -31,8 +31,7 @@ elif [ "$(uname)" == "Linux" ]; then
     cargo install exa
     cargo install du-dust
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    sudo apt install -y nodejs neovim ripgrep fzf fd-find prettyping clangd
+    sudo apt install -y neovim ripgrep fzf fd-find prettyping clangd
     # set fish as default shell
     # echo /usr/bin/fish | sudo tee -a /etc/shells - unnecessary on ubuntu
     chsh -s /usr/bin/fish
@@ -42,8 +41,3 @@ else
     echo "This script has not been tested on your operating system/environment. Exiting."
     exit 1
 fi
-
-# for neovim, optional
-npm install -g neovim
-pip3 install --upgrade pynvim
-

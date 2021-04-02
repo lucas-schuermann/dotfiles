@@ -4,30 +4,9 @@
 [submodule "neovim/.config/nvim/pack/fzf/start/fzf.vim"]
 	path = neovim/.config/nvim/pack/fzf/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule "neovim/.config/nvim/pack/rust.vim/start/rust.vim"]
-	path = neovim/.config/nvim/pack/rust.vim/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
-[submodule "neovim/.config/nvim/pack/vim-go/start/vim-go"]
-	path = neovim/.config/nvim/pack/vim-go/start/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "neovim/.config/nvim/pack/surround.vim/start/vim-surround"]
-	path = neovim/.config/nvim/pack/surround.vim/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "neovim/.config/nvim/pack/nerdtree/start/nerdtree"]
 	path = neovim/.config/nvim/pack/nerdtree/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 [submodule "neovim/.config/nvim/pack/lightline.vim/start/lightline.vim"]
 	path = neovim/.config/nvim/pack/lightline.vim/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-[submodule "neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter"]
-	path = neovim/.config/nvim/pack/vim-gitgutter/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "neovim/.config/nvim/pack/ack.vim/start/ack.vim"]
-	path = neovim/.config/nvim/pack/ack.vim/start/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter"]
-	path = neovim/.config/nvim/pack/nerdcommenter/start/nerdcommenter
-	url = https://github.com/preservim/nerdcommenter.git
-[submodule "neovim/.config/nvim/pack/vim-visual-multi/start/vim-visual-multi"]
-	path = neovim/.config/nvim/pack/vim-visual-multi/start/vim-visual-multi
-	url = https://github.com/mg979/vim-visual-multi.git
