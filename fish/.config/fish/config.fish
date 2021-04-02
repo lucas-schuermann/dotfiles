@@ -4,8 +4,8 @@ abbr -a l 'exa -F'
 abbr -a ls exa
 abbr -a ll 'exa -alF'
 abbr -a la 'exa -aF'
-abbr -a c code  # VSCode default cmd
-abbr -a e nvim
+abbr -a e code  # VSCode default cmd
+abbr -a v nvim
 abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
@@ -42,7 +42,8 @@ set -g fish_color_search_match   --background=$selection
 set -g fish_color_selection      --background=$selection
 
 # general env
-setenv EDITOR nvim
+#setenv EDITOR nvim
+setenv EDITOR code
 setenv NAME "Lucas V. Schuermann"
 setenv EMAIL "lucas.v.schuermann@gmail.com"
 setenv TZ "America/New_York"
