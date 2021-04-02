@@ -5,7 +5,7 @@ My personal environment configuration files
 ## Usage
 
 Pull the repository, optionally install package dependencies `./install_deps.sh`, then create the symbolic links using GNU stow.
-```
+```bash
 $ git clone git@github.com:cerrno/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ stow fish git neovim
