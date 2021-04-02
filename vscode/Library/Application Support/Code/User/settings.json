@@ -39,5 +39,10 @@
     ],
     "workbench.activityBar.visible": false,
     "json.schemaDownload.enable": false,
-    "settingsSync.keybindingsPerPlatform": false
+    "settingsSync.keybindingsPerPlatform": false,
+    "C_Cpp.intelliSenseMemoryLimit": 8192,
+    "python.jediMemoryLimit": 8192,
+    "python.analysis.memory.keepLibraryAst": true,
+    "rust-analyzer.lruCapacity": 256,
+    "search.maintainFileSearchCache": true
 }
