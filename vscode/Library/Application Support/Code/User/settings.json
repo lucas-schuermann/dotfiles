@@ -32,5 +32,11 @@
     "gulp.autoDetect": "off",
     "jake.autoDetect": "off",
     "explorer.confirmDelete": false,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
