@@ -11,14 +11,18 @@ $ cd ~/.dotfiles
 $ stow fish git neovim
 ```
 
-## VSCode Extensions
-- Dracula Offical (theme)
-- rust-analyzer
-- C/C++ (Microsoft)
-- Python (Microsft)
-- Jupyter (Microsoft)
-- Go (Google)
-- Docker (Microsoft)
+## VSCode
+All non-essential `@builtin` extensions are disabled to improve startup time.
+```bash
+$ code --list-extensions
+dracula-theme.theme-dracula
+golang.go
+matklad.rust-analyzer
+ms-azuretools.vscode-docker
+ms-python.python
+ms-toolsai.jupyter
+ms-vscode.cpptools
+```
 
 ## License
 
