@@ -11,6 +11,15 @@ $ cd ~/.dotfiles
 $ stow fish git neovim
 ```
 
+## VSCode Extensions
+- Dracula Offical (theme)
+- rust-analyzer
+- C/C++ (Microsoft)
+- Python (Microsft)
+- Jupyter (Microsoft)
+- Go (Google)
+- Docker (Microsoft)
+
 ## License
 
 [MIT](https://lucasschuermann.com/license.txt)

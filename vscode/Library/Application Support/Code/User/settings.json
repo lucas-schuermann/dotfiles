@@ -31,5 +31,6 @@
     "grunt.autoDetect": "off",
     "gulp.autoDetect": "off",
     "jake.autoDetect": "off",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.activityBar.visible": false
 }
