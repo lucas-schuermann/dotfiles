@@ -42,8 +42,7 @@ set -g fish_color_search_match   --background=$selection
 set -g fish_color_selection      --background=$selection
 
 # general env
-#setenv EDITOR nvim
-setenv EDITOR code
+setenv EDITOR nvim
 setenv NAME "Lucas V. Schuermann"
 setenv EMAIL "lucas.v.schuermann@gmail.com"
 setenv TZ "America/New_York"
