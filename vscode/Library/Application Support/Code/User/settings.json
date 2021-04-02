@@ -17,7 +17,6 @@
     "workbench.preferredDarkColorTheme": "Dracula",
     "workbench.preferredHighContrastColorTheme": "Dracula",
     "workbench.preferredLightColorTheme": "Dracula",
-    "workbench.iconTheme": "vs-minimal",
     "workbench.tips.enabled": false,
     "workbench.editor.limit.value": 25,
     "workbench.settings.enableNaturalLanguageSearch": false,
@@ -32,11 +31,11 @@
     "gulp.autoDetect": "off",
     "jake.autoDetect": "off",
     "explorer.confirmDelete": false,
-    "workbench.activityBar.visible": false,
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
             "filenamePattern": "*.ipynb"
         }
-    ]
+    ],
+    "workbench.activityBar.visible": false
 }
