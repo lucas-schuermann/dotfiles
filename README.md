@@ -12,6 +12,7 @@ $ stow fish git neovim
 ```
 
 ## VSCode
+
 All non-essential `@builtin` extensions are disabled to improve startup time.
 ```bash
 $ code --list-extensions
