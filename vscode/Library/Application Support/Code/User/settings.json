@@ -44,5 +44,6 @@
     "python.jediMemoryLimit": 8192,
     "python.analysis.memory.keepLibraryAst": true,
     "rust-analyzer.lruCapacity": 256,
-    "search.maintainFileSearchCache": true
+    "search.maintainFileSearchCache": true,
+    "editor.smoothScrolling": true
 }
