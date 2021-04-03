@@ -45,5 +45,6 @@
     "python.analysis.memory.keepLibraryAst": true,
     "rust-analyzer.lruCapacity": 256,
     "search.maintainFileSearchCache": true,
-    "editor.smoothScrolling": true
+    "editor.smoothScrolling": true,
+    "breadcrumbs.enabled": false
 }
