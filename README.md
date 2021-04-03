@@ -23,6 +23,7 @@ ms-azuretools.vscode-docker
 ms-python.python
 ms-toolsai.jupyter
 ms-vscode.cpptools
+ms-vscode.sublime-keybindings
 ```
 
 ## License
