@@ -88,6 +88,5 @@ set PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
 # `pyenv init - | source` is slow, copied below without `pyenv rehash` (do manually)
 # and `function pyenv` (only for `pyenv shell`)
-set -gx PATH '/Users/Lucas/.pyenv/shims' $PATH
+set -gx PATH '(pyenv root)/.pyenv/shims' $PATH
 set -gx PYENV_SHELL fish
-source '/usr/local/Cellar/pyenv/1.2.24.1/libexec/../completions/pyenv.fish'
