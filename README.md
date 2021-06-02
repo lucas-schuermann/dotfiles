@@ -18,9 +18,11 @@ All non-essential `@builtin` extensions are disabled to improve startup time.
 $ code --list-extensions
 dracula-theme.theme-dracula
 golang.go
+James-Yu.latex-workshop
 matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
