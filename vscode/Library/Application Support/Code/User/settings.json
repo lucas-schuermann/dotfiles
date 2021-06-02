@@ -49,5 +49,15 @@
     "breadcrumbs.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "workbench.list.smoothScrolling": true,
-    "terminal.integrated.scrollback": 10000
+    "terminal.integrated.scrollback": 10000,
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
+    "python.linting.prospectorEnabled": true,
+    "python.defaultInterpreterPath": "python3",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.editor.untitled.hint": "hidden",
+    "python.experiments.enabled": false,
+    "python.linting.prospectorArgs": [
+        "--strictness=low"
+    ]
 }
