@@ -1,7 +1,16 @@
 # set default CLI commands
 abbr -a ping 'prettyping --nolegend'
-abbr -a l 'exa -F'
 abbr -a ls exa
+abbr -a vim nvim
+abbr -a find fd
+abbr -a du dust
+abbr -a ps procs
+abbr -a cd z
+abbr -a curl xh
+abbr -a wget xh
+
+# shortcuts
+abbr -a l 'exa -F'
 abbr -a ll 'exa -alF'
 abbr -a la 'exa -aF'
 abbr -a e code  # VSCode default cmd
@@ -9,9 +18,6 @@ abbr -a v nvim
 abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
-abbr -a vim nvim
-abbr -a find fd
-abbr -a du dust
 
 # no prompt greeting for speed
 set fish_greeting
@@ -83,10 +89,10 @@ setenv RUSTFLAGS "-C target-cpu=native"
 # c and cpp
 set -x PATH '/usr/local/opt/llvm/bin' $PATH
 
+# zoxide (cd replacement)
+zoxide init fish | source
+
 # python (keep at bottom)
 set PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
-# `pyenv init - | source` is slow, copied below without `pyenv rehash` (do manually)
-# and `function pyenv` (only for `pyenv shell`)
-set -gx PATH '(pyenv root)/.pyenv/shims' $PATH
-set -gx PYENV_SHELL fish
+pyenv init --path | source

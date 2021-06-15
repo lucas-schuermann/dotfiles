@@ -31,12 +31,9 @@
     "gulp.autoDetect": "off",
     "jake.autoDetect": "off",
     "explorer.confirmDelete": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "workbench.activityBar.visible": false,
     "json.schemaDownload.enable": false,
     "settingsSync.keybindingsPerPlatform": false,
@@ -59,5 +56,6 @@
     "python.experiments.enabled": false,
     "python.linting.prospectorArgs": [
         "--strictness=low"
-    ]
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
 }

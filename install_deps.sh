@@ -14,6 +14,11 @@ if [ "$(uname)" != "Darwin" ]; then
     brew install dust
     brew install prettyping
     brew install llvm
+    brew install jq
+    brew install tealdeer
+    brew install zoxide
+    brew install procs
+    brew install xh
     # install useful key bindings and fuzzy completion for fzf
     $(brew --prefix)/opt/fzf/install
     # set fish as default shell
@@ -30,8 +35,11 @@ elif [ "$(uname)" == "Linux" ]; then
     sudo apt install fish
     cargo install exa
     cargo install du-dust
+    cargo install tealdeer
+    cargo install procs
+    cargo install xh
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-    sudo apt install -y neovim ripgrep fzf fd-find prettyping clangd
+    sudo apt install -y neovim ripgrep fzf fd-find prettyping clangd jq zoxide
     # set fish as default shell
     # echo /usr/bin/fish | sudo tee -a /etc/shells - unnecessary on ubuntu
     chsh -s /usr/bin/fish
