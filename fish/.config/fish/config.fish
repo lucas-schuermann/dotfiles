@@ -80,6 +80,10 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # brew
 set -x PATH '/usr/local/sbin' $PATH
 
+# go
+set -x GOPATH $HOME/.go
+set -x PATH $GOPATH $PATH
+
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
 setenv CARGO_INCREMENTAL 1

@@ -26,6 +26,8 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
+svelte.svelte-vscode
+vadimcn.vscode-lldb
 ```
 
 ## License

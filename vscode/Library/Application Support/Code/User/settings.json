@@ -32,7 +32,7 @@
     "jake.autoDetect": "off",
     "explorer.confirmDelete": false,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     "workbench.activityBar.visible": false,
     "json.schemaDownload.enable": false,
@@ -40,7 +40,7 @@
     "C_Cpp.intelliSenseMemoryLimit": 8192,
     "python.jediMemoryLimit": 8192,
     "python.analysis.memory.keepLibraryAst": true,
-    "rust-analyzer.lruCapacity": 256,
+    "rust-analyzer.lruCapacity": 1024,
     "search.maintainFileSearchCache": true,
     "editor.smoothScrolling": true,
     "breadcrumbs.enabled": false,
@@ -58,4 +58,12 @@
         "--strictness=low"
     ],
     "security.workspace.trust.untrustedFiles": "open",
+    "rust-analyzer.assist.importEnforceGranularity": true,
+    "svelte.enable-ts-plugin": true,
+    "git.confirmSync": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.showStartPage": false,
 }
