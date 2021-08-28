@@ -79,6 +79,7 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # brew
 set -x PATH '/usr/local/sbin' $PATH
+setenv HOMEBREW_NO_ANALYTICS 1
 
 # go
 set -x GOPATH $HOME/.go
