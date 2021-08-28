@@ -43,7 +43,6 @@
     "rust-analyzer.lruCapacity": 1024,
     "search.maintainFileSearchCache": true,
     "editor.smoothScrolling": true,
-    "breadcrumbs.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.scrollback": 10000,
@@ -66,4 +65,6 @@
         "jupyter-notebook": "left"
     },
     "python.showStartPage": false,
+    "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+    "docker.showStartPage": false,
 }
