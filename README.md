@@ -29,7 +29,3 @@ ms-vscode.sublime-keybindings
 svelte.svelte-vscode
 vadimcn.vscode-lldb
 ```
-
-## License
-
-[MIT](https://lucasschuermann.com/license.txt)
