@@ -33,7 +33,3 @@ svelte.svelte-vscode
 tamasfe.even-better-toml
 vadimcn.vscode-lldb
 ```
-
-## License
-
-[MIT](https://lucasschuermann.com/license.txt)
