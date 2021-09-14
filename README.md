@@ -16,6 +16,7 @@ $ stow fish git neovim
 All non-essential `@builtin` extensions are disabled to improve startup time.
 ```bash
 $ code --list-extensions
+4ops.terraform
 dracula-theme.theme-dracula
 golang.go
 James-Yu.latex-workshop
@@ -24,9 +25,12 @@ ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
+serayuzgur.crates
 svelte.svelte-vscode
+tamasfe.even-better-toml
 vadimcn.vscode-lldb
 ```
 
