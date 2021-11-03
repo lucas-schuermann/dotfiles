@@ -78,7 +78,8 @@ setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # brew
-set -x PATH '/usr/local/sbin' $PATH
+abbr -a oldbrew '/usr/local/bin/brew'  # pre apple silicon
+set -x PATH '/opt/homebrew/bin' $PATH
 setenv HOMEBREW_NO_ANALYTICS 1
 
 # go
@@ -87,12 +88,12 @@ set -x PATH $GOPATH $PATH
 
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
+set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
+setenv RUSTFLAGS "-L/opt/homebrew/lib -L/opt/homebrew/opt/libpq/lib -C target-cpu=native"
 setenv CARGO_INCREMENTAL 1
-setenv RUST_BACKTRACE 1
-setenv RUSTFLAGS "-C target-cpu=native"
 
 # c and cpp
-set -x PATH '/usr/local/opt/llvm/bin' $PATH
+set -x PATH '/opt/homebrew/opt/llvm/bin' $PATH
 
 # zoxide (cd replacement)
 zoxide init fish | source

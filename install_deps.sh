@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$(uname)" != "Darwin" ]; then
-    echo "Running install for MacOS environment"
+    echo "Running install for MacOS (Apple Silicon) environment"
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
@@ -22,8 +22,8 @@ if [ "$(uname)" != "Darwin" ]; then
     # install useful key bindings and fuzzy completion for fzf
     $(brew --prefix)/opt/fzf/install
     # set fish as default shell
-    echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    chsh -s /usr/local/bin/fish
+    echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+    chsh -s /opt/homebrew/bin/fish
     # for setup
     brew install stow
 elif [ "$(uname)" == "Linux" ]; then
