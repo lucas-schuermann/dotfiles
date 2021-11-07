@@ -81,4 +81,6 @@
     "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
     "rust-analyzer.hoverActions.references": true,
     "rust-analyzer.lens.methodReferences": true,
+    "html.format.wrapLineLength": 0,
+    "html.format.templating": true,
 }

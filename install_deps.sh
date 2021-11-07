@@ -1,7 +1,14 @@
 #!/bin/bash
 
-if [ "$(uname)" != "Darwin" ]; then
-    echo "Running install for MacOS (Apple Silicon) environment"
+if [ "$(uname)" == "Darwin" ]; then
+    echo "Running install for MacOS environment"
+    CPU=$(uname -p)
+    if [ "$CPU" == "arm" ]; then
+        echo "Configuring for Apple Silicon platform"
+    else
+        echo "Configuring for x84_64 platform"
+    fi
+    exit 0
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
@@ -21,9 +28,17 @@ if [ "$(uname)" != "Darwin" ]; then
     brew install xh
     # install useful key bindings and fuzzy completion for fzf
     $(brew --prefix)/opt/fzf/install
+    if [ "$CPU" != "arm" ]; then
+        echo "\"~/.config/fish/functions/fzf_key_bindings.fish\" symlink might be broken for non Apple Silicon platforms. Please refer to fzf docs to replace."
+    fi
     # set fish as default shell
-    echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-    chsh -s /opt/homebrew/bin/fish
+    if [ "$CPU" == "arm" ]; then
+        echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+        chsh -s /opt/homebrew/bin/fish
+    else
+        echo /usr/local/bin/fish | sudo tee -a /etc/shells
+        chsh -s /usr/local/bin/fish
+    fi
     # for setup
     brew install stow
 elif [ "$(uname)" == "Linux" ]; then

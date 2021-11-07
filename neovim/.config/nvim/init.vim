@@ -87,6 +87,7 @@ nnoremap <leader>, :Buffers<CR>
 " fzf 
 " paths to accomodate Homebrew
 set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 set rtp+=/usr/bin/fzf
 
 " ripgrep

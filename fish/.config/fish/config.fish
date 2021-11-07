@@ -78,8 +78,14 @@ setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # brew
-abbr -a oldbrew '/usr/local/bin/brew'  # pre apple silicon
-set -x PATH '/opt/homebrew/bin' $PATH
+# Handle Mac platforms
+set CPU (uname -p)
+if [ $CPU = "arm" ]
+    abbr -a oldbrew '/usr/local/bin/brew'  # pre apple silicon
+    set -x PATH '/opt/homebrew/bin' $PATH
+else
+    set -x PATH '/usr/local/sbin' $PATH
+end
 setenv HOMEBREW_NO_ANALYTICS 1
 
 # go
@@ -88,12 +94,24 @@ set -x PATH $GOPATH $PATH
 
 # rust
 set -x PATH $HOME/.cargo/bin $PATH
-set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
-setenv RUSTFLAGS "-L/opt/homebrew/lib -L/opt/homebrew/opt/libpq/lib -C target-cpu=native"
+if [ $CPU = "arm" ]
+    set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
+    setenv RUSTFLAGS "-L/opt/homebrew/lib -L/opt/homebrew/opt/libpq/lib -C target-cpu=native"
+else
+    setenv RUSTFLAGS "-C target-cpu=native"
+end
 setenv CARGO_INCREMENTAL 1
+setenv RUST_BACKTRACE 1
 
 # c and cpp
-set -x PATH '/opt/homebrew/opt/llvm/bin' $PATH
+if [ $CPU = "arm" ]
+    set -x C_INCLUDE_PATH '/opt/homebrew/include' $C_INCLUDE_PATH
+    set -x CPLUS_INCLUDE_PATH '/opt/homebrew/include' $CPLUS_INCLUDE_PATH
+    set -x LIBRARY_PATH '/opt/homebrew/lib' $LIBRARY_PATH
+    set -x PATH '/opt/homebrew/opt/llvm/bin' $PATH
+else
+    set -x PATH '/usr/local/opt/llvm/bin' $PATH
+end
 
 # zoxide (cd replacement)
 zoxide init fish | source
