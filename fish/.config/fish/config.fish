@@ -82,23 +82,22 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 set CPU (uname -p)
 if [ $CPU = "arm" ]
     abbr -a oldbrew '/usr/local/bin/brew'  # pre apple silicon
-    set -x PATH '/opt/homebrew/bin' $PATH
+    fish_add_path '/opt/homebrew/bin'
+    fish_add_path '/opt/homebrew/sbin'
 else
-    set -x PATH '/usr/local/sbin' $PATH
+    fish_add_path '/usr/local/sbin'
 end
 setenv HOMEBREW_NO_ANALYTICS 1
 
 # go
 set -x GOPATH $HOME/.go
-set -x PATH $GOPATH $PATH
+fish_add_path $GOPATH
 
 # rust
-set -x PATH $HOME/.cargo/bin $PATH
+fish_add_path $HOME/.cargo/bin
 if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
-    setenv RUSTFLAGS "-L/opt/homebrew/lib -L/opt/homebrew/opt/libpq/lib -C target-cpu=native"
-else
-    setenv RUSTFLAGS "-C target-cpu=native"
+    setenv RUSTFLAGS "-L/opt/homebrew/lib"
 end
 setenv CARGO_INCREMENTAL 1
 setenv RUST_BACKTRACE 1
@@ -108,9 +107,9 @@ if [ $CPU = "arm" ]
     set -x C_INCLUDE_PATH '/opt/homebrew/include' $C_INCLUDE_PATH
     set -x CPLUS_INCLUDE_PATH '/opt/homebrew/include' $CPLUS_INCLUDE_PATH
     set -x LIBRARY_PATH '/opt/homebrew/lib' $LIBRARY_PATH
-    set -x PATH '/opt/homebrew/opt/llvm/bin' $PATH
+    fish_add_path '/opt/homebrew/opt/llvm/bin'
 else
-    set -x PATH '/usr/local/opt/llvm/bin' $PATH
+    fish_add_path '/usr/local/opt/llvm/bin'
 end
 
 # zoxide (cd replacement)
@@ -118,5 +117,5 @@ zoxide init fish | source
 
 # python (keep at bottom)
 set PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin $PATH
+fish_add_path $PYENV_ROOT/bin
 pyenv init --path | source
