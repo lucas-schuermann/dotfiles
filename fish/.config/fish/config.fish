@@ -97,7 +97,6 @@ fish_add_path $GOPATH
 fish_add_path $HOME/.cargo/bin
 if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
-    setenv RUSTFLAGS "-L/opt/homebrew/lib"
 end
 setenv CARGO_INCREMENTAL 1
 setenv RUST_BACKTRACE 1
