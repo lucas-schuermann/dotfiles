@@ -19,6 +19,19 @@ abbr -a m make
 abbr -a g git
 abbr -a vimdiff 'nvim -d'
 
+# Variational AWS
+abbr -a aws-exec aws-vault exec --prompt ykman
+abbr -a aws-code ykman oath accounts code
+# Variational Rust
+abbr -a fmt 'cargo fmt --all -- --check'
+abbr -a clippy 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions'
+abbr -a check 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions'
+abbr -a test 'cargo test --workspace --all-features'
+abbr -a build 'cargo build --workspace --all-targets --all-features'
+abbr -a run 'cargo run'
+abbr -a clean 'cargo clean'
+abbr -a bench 'cargo bench'
+
 # no prompt greeting for speed
 set fish_greeting
 
