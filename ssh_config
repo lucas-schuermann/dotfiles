@@ -8,7 +8,7 @@ Host *
   #ControlMaster auto
   #ControlPath ~/.ssh/master-%r@%h:%p
   #ControlPersist 300
-  #AddKeysToAgent yes
+  AddKeysToAgent 1h # LVS to remove once can switch to ybk
   AddressFamily inet
   HashKnownHosts yes
   VisualHostKey yes

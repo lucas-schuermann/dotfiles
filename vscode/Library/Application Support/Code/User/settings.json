@@ -83,4 +83,7 @@
     "html.format.templating": true,
     "workbench.colorTheme": "Dracula",
     "workbench.preferredDarkColorTheme": "Dracula",
+    "files.associations": {
+        "*.hcl": "terragrunt"
+    },
 }
