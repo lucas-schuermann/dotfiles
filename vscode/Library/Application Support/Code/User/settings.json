@@ -86,4 +86,6 @@
     "files.associations": {
         "*.hcl": "terragrunt"
     },
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.gpuAcceleration": "on",
 }
