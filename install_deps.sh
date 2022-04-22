@@ -8,7 +8,6 @@ if [ "$(uname)" == "Darwin" ]; then
     else
         echo "Configuring for x84_64 platform"
     fi
-    exit 0
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
