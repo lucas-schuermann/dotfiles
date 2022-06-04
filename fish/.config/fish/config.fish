@@ -17,6 +17,7 @@ abbr -a e code  # VSCode default cmd
 abbr -a v nvim
 abbr -a m make
 abbr -a g git
+abbr -a gah 'git stash; and git pull --rebase; and git stash pop'
 abbr -a vimdiff 'nvim -d'
 
 # Variational AWS
@@ -76,9 +77,13 @@ setenv LESS "-F -X -R"
 # fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate ''
+set __fish_git_prompt_showupstream 'none'
+set -g fish_prompt_pwd_dir_length 3
 
 # use ripgrep for fzf
 set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+set -gx FZF_CTRL_T_COMMAND  'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 # colored man output
 # from http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
