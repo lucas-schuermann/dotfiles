@@ -20,7 +20,6 @@ $ code --list-extensions
 dracula-theme.theme-dracula
 golang.go
 James-Yu.latex-workshop
-matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
@@ -30,6 +29,7 @@ ms-toolsai.jupyter-renderers
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
+rust-lang.rust-analyzer
 serayuzgur.crates
 svelte.svelte-vscode
 tamasfe.even-better-toml
