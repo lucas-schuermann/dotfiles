@@ -1,8 +1,9 @@
 [target.x86_64-unknown-linux-gnu]
-rustflags = ["-C", "target-cpu=native"]
+linker = "/usr/bin/clang"
+rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/usr/local/bin/mold"]
 
 [target.x86_64-apple-darwin]
-rustflags = ["-C", "target-cpu=native"]
+rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/usr/local/bin/zld", "-Csplit-debuginfo=unpacked"]
 
 [target.aarch64-apple-darwin]
-rustflags = ["-C", "target-cpu=native"]
+rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/opt/homebrew/bin/zld", "-Csplit-debuginfo=unpacked"]

@@ -27,7 +27,7 @@ abbr -a aws-code ykman oath accounts code
 abbr -a fmt 'cargo fmt --all -- --check'
 abbr -a clippy 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
 abbr -a check 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
-abbr -a test 'cargo test --workspace --all-features'
+abbr -a test 'cargo nextest run --workspace --all-features'
 abbr -a build 'cargo build --workspace --all-targets --all-features'
 abbr -a run 'cargo run'
 abbr -a clean 'cargo clean'
@@ -116,9 +116,9 @@ fish_add_path $HOME/.cargo/bin
 if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
 end
+setenv RUSTC_WRAPPER $HOME/.cargo/bin/sccache
 setenv CARGO_INCREMENTAL 1
 setenv RUST_BACKTRACE 1
-setenv RUSTFLAGS '-D warnings -W unreachable-pub -W rust-2021-compatibility'
 
 # c and cpp
 if [ $CPU = "arm" ]
