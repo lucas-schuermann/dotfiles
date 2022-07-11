@@ -3,7 +3,7 @@ linker = "/usr/bin/clang"
 rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/usr/local/bin/mold"]
 
 [target.x86_64-apple-darwin]
-rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/usr/local/bin/zld", "-Csplit-debuginfo=unpacked"]
+rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/usr/local/bin/zld", "-C", "split-debuginfo=unpacked"]
 
 [target.aarch64-apple-darwin]
-rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/opt/homebrew/bin/zld", "-Csplit-debuginfo=unpacked"]
+rustflags = ["-C", "target-cpu=native", "-C", "link-arg=-fuse-ld=/opt/homebrew/bin/zld", "-C", "split-debuginfo=unpacked"]

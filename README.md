@@ -26,13 +26,11 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
-ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 rust-lang.rust-analyzer
 serayuzgur.crates
 svelte.svelte-vscode
 tamasfe.even-better-toml
-twxs.cmake
 vadimcn.vscode-lldb
 ```
