@@ -12,7 +12,6 @@ if [ "$(uname)" == "Darwin" ]; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
     brew install exa
-    brew install pyenv
     brew install neovim --HEAD
     brew install ripgrep
     brew install fzf
@@ -52,7 +51,6 @@ elif [ "$(uname)" == "Linux" ]; then
     cargo install tealdeer
     cargo install procs
     cargo install xh
-    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     sudo apt install -y neovim ripgrep fzf fd-find prettyping clangd jq zoxide
     # set fish as default shell
     # echo /usr/bin/fish | sudo tee -a /etc/shells - unnecessary on ubuntu

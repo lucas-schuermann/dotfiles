@@ -25,8 +25,8 @@ abbr -a aws-exec aws-vault exec --prompt ykman
 abbr -a aws-code ykman oath accounts code
 # Variational Rust
 abbr -a fmt 'cargo fmt --all -- --check'
-abbr -a clippy 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions'
-abbr -a check 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions'
+abbr -a clippy 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
+abbr -a check 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
 abbr -a test 'cargo test --workspace --all-features'
 abbr -a build 'cargo build --workspace --all-targets --all-features'
 abbr -a run 'cargo run'
@@ -118,6 +118,7 @@ if [ $CPU = "arm" ]
 end
 setenv CARGO_INCREMENTAL 1
 setenv RUST_BACKTRACE 1
+setenv RUSTFLAGS '-D warnings -W unreachable-pub -W rust-2021-compatibility'
 
 # c and cpp
 if [ $CPU = "arm" ]
@@ -131,8 +132,3 @@ end
 
 # zoxide (cd replacement)
 zoxide init fish | source
-
-# python (keep at bottom)
-set PYENV_ROOT $HOME/.pyenv
-fish_add_path $PYENV_ROOT/bin
-pyenv init --path | source
