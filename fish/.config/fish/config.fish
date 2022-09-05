@@ -24,14 +24,18 @@ abbr -a vimdiff 'nvim -d'
 abbr -a aws-exec aws-vault exec --prompt ykman
 abbr -a aws-code ykman oath accounts code
 # Variational Rust
-abbr -a fmt 'cargo fmt --all -- --check'
-abbr -a clippy 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
-abbr -a check 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else'
-abbr -a test 'cargo nextest run --workspace --all-features'
+set FMT 'cargo fmt --all -- --check'
+set CLIPPY 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else -Aclippy::too_many_lines'
+set TEST 'cargo nextest run --workspace --all-features'
+abbr -a fmt $FMT
+abbr -a clippy $CLIPPY
+abbr -a check $CLIPPY
+abbr -a test $TEST
 abbr -a build 'cargo build --workspace --all-targets --all-features'
 abbr -a run 'cargo run'
 abbr -a clean 'cargo clean'
 abbr -a bench 'cargo bench'
+abbr -a pc "$FMT; and $CLIPPY; and $TEST"
 
 # no prompt greeting for speed
 set fish_greeting
