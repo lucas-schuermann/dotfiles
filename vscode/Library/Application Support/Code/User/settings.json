@@ -87,4 +87,6 @@
     "rust-analyzer.imports.granularity.enforce": true,
     "rust-analyzer.hover.actions.references.enable": true,
     "rust-analyzer.lru.capacity": 1024,
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "python.analysis.typeCheckingMode": "basic",
 }

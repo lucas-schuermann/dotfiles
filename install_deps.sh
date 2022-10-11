@@ -44,9 +44,10 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(uname)" == "Linux" ]; then
     echo "Running install for Ubuntu environment"
     # install main deps
-    sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-pip
+    sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-pip pkg-config
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    source "$HOME/.cargo/env"
     sudo apt install fish
     cargo install exa
     cargo install du-dust
