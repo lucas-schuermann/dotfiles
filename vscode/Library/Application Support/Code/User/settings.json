@@ -89,4 +89,10 @@
     "rust-analyzer.lru.capacity": 1024,
     "svelte.plugin.svelte.note-new-transformation": false,
     "python.analysis.typeCheckingMode": "basic",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.bracketSameLine": true,
+    "prettier.trailingComma": "all",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

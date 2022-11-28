@@ -71,6 +71,7 @@ cargo install cargo-binutils
 cargo install cargo-generate
 cargo install cargo-nextest
 cargo install cargo-update
+cargo install cargo-edit
 cargo install flamegraph
 cargo install mdbook
 cargo install sccache

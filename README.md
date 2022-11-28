@@ -18,14 +18,18 @@ All non-essential `@builtin` extensions are disabled to improve startup time.
 $ code --list-extensions
 4ops.terraform
 dracula-theme.theme-dracula
+esbenp.prettier-vscode
 golang.go
 James-Yu.latex-workshop
 ms-azuretools.vscode-docker
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
 ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 rust-lang.rust-analyzer
