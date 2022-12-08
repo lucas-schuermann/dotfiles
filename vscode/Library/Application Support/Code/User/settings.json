@@ -89,10 +89,17 @@
     "rust-analyzer.lru.capacity": 1024,
     "svelte.plugin.svelte.note-new-transformation": false,
     "python.analysis.typeCheckingMode": "basic",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.bracketSameLine": true,
     "prettier.trailingComma": "all",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
