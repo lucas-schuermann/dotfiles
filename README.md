@@ -1,18 +1,14 @@
-# dotfiles
-
-My personal environment configuration files
+`dotfiles` contains my personal environment configuration files.
 
 ## Usage
-
 Pull the repository, optionally install package dependencies `./install_deps.sh`, then create the symbolic links using GNU stow.
 ```bash
-$ git clone git@github.com:cerrno/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles
-$ stow fish git neovim
+git clone https://github.com/cerrno/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+stow cargo curl fish git neovim
 ```
 
 ## VSCode
-
 All non-essential `@builtin` extensions are disabled to improve startup time.
 ```bash
 $ code --list-extensions
