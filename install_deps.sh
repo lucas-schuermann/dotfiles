@@ -24,8 +24,6 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install zoxide
     brew install procs
     brew install xh
-    # rust globally configured to use better linker
-    brew install michaeleisel/zld/zld
     # install useful key bindings and fuzzy completion for fzf
     $(brew --prefix)/opt/fzf/install
     if [ "$CPU" != "arm" ]; then

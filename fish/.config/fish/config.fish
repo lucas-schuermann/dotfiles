@@ -25,7 +25,7 @@ abbr -a aws-exec aws-vault exec --prompt ykman
 abbr -a aws-code ykman oath accounts code
 # Variational Rust
 set FMT 'cargo fmt --all -- --check'
-set CLIPPY 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::implicit_hasher -Aclippy::multiple_crate_versions -Aclippy::module-name-repetitions -Aclippy::single-match-else -Aclippy::too_many_lines'
+set CLIPPY 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::multiple-crate-versions -Aclippy::module-name-repetitions -Aclippy::implicit-hasher'
 set TEST 'cargo nextest run --workspace --all-features'
 abbr -a fmt $FMT
 abbr -a clippy $CLIPPY

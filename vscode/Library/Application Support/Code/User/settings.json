@@ -29,7 +29,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "json.schemaDownload.enable": false,
     "settingsSync.keybindingsPerPlatform": false,
     "C_Cpp.intelliSenseMemoryLimit": 8192,
     "python.jediMemoryLimit": 8192,
@@ -94,12 +93,12 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }
