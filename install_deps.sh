@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux
+
 if [ "$(uname)" == "Darwin" ]; then
     echo "Running install for MacOS environment"
     CPU=$(uname -p)

@@ -5,8 +5,11 @@ Pull the repository, optionally install package dependencies `./install_deps.sh`
 ```bash
 git clone https://github.com/cerrno/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+./install_deps.sh
 stow cargo curl fish git neovim
 ```
+
+Periodically update dependencies with `./update_deps.sh`.
 
 ## VSCode
 All non-essential `@builtin` extensions are disabled to improve startup time.
@@ -14,7 +17,6 @@ All non-essential `@builtin` extensions are disabled to improve startup time.
 $ code --list-extensions
 4ops.terraform
 dracula-theme.theme-dracula
-esbenp.prettier-vscode
 golang.go
 James-Yu.latex-workshop
 ms-azuretools.vscode-docker
@@ -30,6 +32,7 @@ ms-vscode.cpptools
 ms-vscode.sublime-keybindings
 rust-lang.rust-analyzer
 serayuzgur.crates
+streetsidesoftware.code-spell-checker
 svelte.svelte-vscode
 tamasfe.even-better-toml
 vadimcn.vscode-lldb
