@@ -16,7 +16,7 @@ if [ "$(uname)" == "Darwin" ]; then
     done
 elif [ "$(uname)" == "Linux" ]; then
     echo "Running update for Ubuntu environment"
-    sudo apt update && sudo apt upgrade -y && sudo apt autoclean -y
+    sudo apt update && sudo apt upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y
 else
     echo "This script has not been tested on your operating system/environment. Exiting."
     exit 1
