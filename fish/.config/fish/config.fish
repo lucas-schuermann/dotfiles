@@ -121,8 +121,7 @@ if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
 end
 setenv RUSTC_WRAPPER $HOME/.cargo/bin/sccache
-setenv CARGO_INCREMENTAL 1
-setenv RUST_BACKTRACE 1
+setenv CARGO_INCREMENTAL 0  # required by sccache
 
 # c and cpp
 if [ $CPU = "arm" ]

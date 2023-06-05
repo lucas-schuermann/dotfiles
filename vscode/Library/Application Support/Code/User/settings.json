@@ -102,15 +102,22 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "cSpell.userWords": [
+        "Schuermann",
         "substeps"
     ],
     "solidity.telemetry": false,
     "github.copilot.enable": {
         "*": true,
-        "yaml": false,
         "plaintext": false,
-        "markdown": false,
-        "scminput": false
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
     },
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "lldb.suppressUpdateNotifications": true,
+    "rust-analyzer.assist.emitMustUse": true,
+    "rust-analyzer.diagnostics.experimental.enable": true,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
+    "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
+    "rust-analyzer.inlayHints.discriminantHints.enable": "fieldless"
 }
