@@ -1,7 +1,7 @@
 [user]
 	name = Lucas V. Schuermann
 	email = lucas@lvs.io
-	signingkey = E8AA29F2F623EAACC7FD3498553C78A267B1E794
+	signingkey = E184DD23264E2C68B60AA746B310BCA76E8EF99A
 [ui "color"]
 	ui = always
 [color]
@@ -33,7 +33,7 @@
 [help]
 	autocorrect = 1
 [github]
-	user = cerrno
+	user = lucas-schuermann
 [protocol]
 	version = 2
 [init]

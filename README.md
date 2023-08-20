@@ -3,7 +3,7 @@
 ## Usage
 Pull the repository, optionally install package dependencies `./install_deps.sh`, then create the symbolic links using GNU stow.
 ```bash
-git clone https://github.com/cerrno/dotfiles.git ~/.dotfiles
+git clone https://github.com/lucas-schuermann/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install_deps.sh
 stow cargo curl fish git neovim
