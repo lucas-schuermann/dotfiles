@@ -17,8 +17,11 @@ All non-essential `@builtin` extensions are disabled to improve startup time.
 $ code --list-extensions
 4ops.terraform
 dracula-theme.theme-dracula
+GitHub.copilot
+GitHub.copilot-chat
 golang.go
 James-Yu.latex-workshop
+JuanBlanco.solidity
 ms-azuretools.vscode-docker
 ms-python.isort
 ms-python.python
