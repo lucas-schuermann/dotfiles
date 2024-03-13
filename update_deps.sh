@@ -22,9 +22,6 @@ else
     exit 1
 fi
 
-# Update python packages
-pip3 list --outdated --format=json | jq -r '.[] | "\(.name)==\(.latest_version)"' | xargs -n1 pip3 install -U
-
 # Update rust dist and binary packages
 rustup update && cargo install-update -a
 

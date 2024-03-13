@@ -43,7 +43,6 @@
     "python.defaultInterpreterPath": "python3",
     "python.pythonPath": "python3",
     "latex-workshop.view.pdf.viewer": "tab",
-    "workbench.editor.untitled.hint": "hidden",
     "python.experiments.enabled": false,
     "python.linting.prospectorArgs": [
         "--strictness=low"
@@ -136,5 +135,7 @@
         "cSpell.fixSpellingWithRenameProvider": true,
         "cSpell.advanced.feature.useReferenceProviderWithRename": true,
         "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
-    }
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "javascript.updateImportsOnFileMove.enabled": "never"
 }
