@@ -137,5 +137,6 @@
         "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
     },
     "workbench.editor.empty.hint": "hidden",
-    "javascript.updateImportsOnFileMove.enabled": "never"
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "github.copilot.editor.enableAutoCompletions": true
 }

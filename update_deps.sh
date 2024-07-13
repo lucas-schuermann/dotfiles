@@ -28,4 +28,4 @@ rustup update && cargo install-update -a
 # Clean unused docker resources
 docker system prune -a
 
-echo "Done! You may wish to update node dependencies manually: \"ncu -g\""
+echo "Done!"
