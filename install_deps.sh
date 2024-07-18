@@ -13,7 +13,7 @@ if [ "$(uname)" == "Darwin" ]; then
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install fish
-    brew install exa
+    brew install eza
     brew install neovim --HEAD
     brew install ripgrep
     brew install fzf
@@ -49,7 +49,7 @@ elif [ "$(uname)" == "Linux" ]; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source "$HOME/.cargo/env"
     sudo apt install -y fish
-    cargo install exa
+    cargo install eza
     cargo install du-dust
     cargo install tealdeer
     cargo install procs

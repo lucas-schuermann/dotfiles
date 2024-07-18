@@ -1,6 +1,6 @@
 # set default CLI commands
 abbr -a ping 'prettyping --nolegend'
-abbr -a ls exa
+abbr -a ls eza
 abbr -a vim nvim
 abbr -a find fd
 abbr -a du dust
@@ -10,9 +10,9 @@ abbr -a curl xh
 abbr -a wget xh
 
 # shortcuts
-abbr -a l 'exa -F'
-abbr -a ll 'exa -alF'
-abbr -a la 'exa -aF'
+abbr -a l 'eza -F'
+abbr -a ll 'eza -alF'
+abbr -a la 'eza -aF'
 abbr -a e code  # VSCode default cmd
 abbr -a v nvim
 abbr -a m make
