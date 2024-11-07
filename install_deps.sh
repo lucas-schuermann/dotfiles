@@ -55,8 +55,7 @@ elif [ "$(uname)" == "Linux" ]; then
     cargo install procs
     cargo install xh
     sudo apt install -y neovim ripgrep fzf fd-find prettyping clangd jq zoxide
-    # rust globally configured to use better linker
-    sudo apt install -y clang mold
+    sudo apt install -y clang
     # set fish as default shell
     # echo /usr/bin/fish | sudo tee -a /etc/shells - unnecessary on ubuntu
     chsh -s /usr/bin/fish
