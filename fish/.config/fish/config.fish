@@ -20,10 +20,7 @@ abbr -a g git
 abbr -a gah 'git stash; and git pull --rebase; and git stash pop'
 abbr -a vimdiff 'nvim -d'
 
-# Variational AWS
-abbr -a aws-exec aws-vault exec --prompt ykman
-abbr -a aws-code ykman oath accounts code
-# Variational Rust
+# Rust shortcuts
 set FMT 'cargo fmt --all -- --check'
 set CLIPPY 'cargo clippy --workspace --all-targets --all-features -- -Dclippy::all -Dclippy::pedantic -Dclippy::cargo -Aclippy::multiple-crate-versions -Aclippy::module-name-repetitions -Aclippy::implicit-hasher'
 set TEST 'cargo nextest run --workspace --all-features'
@@ -85,6 +82,8 @@ set __fish_git_prompt_showstashstate ''
 set __fish_git_prompt_showupstream 'none'
 set -g fish_prompt_pwd_dir_length 3
 
+# Set up fzf key bindings
+fzf --fish | source
 # use ripgrep for fzf
 set -gx FZF_DEFAULT_COMMAND  'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 set -gx FZF_CTRL_T_COMMAND  'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
@@ -100,10 +99,9 @@ setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # brew
-# Handle Mac platforms
+# handle Mac platforms
 set CPU (uname -p)
 if [ $CPU = "arm" ]
-    abbr -a oldbrew '/usr/local/bin/brew'  # pre apple silicon
     fish_add_path '/opt/homebrew/bin'
     fish_add_path '/opt/homebrew/sbin'
 else
@@ -120,8 +118,6 @@ fish_add_path $HOME/.cargo/bin
 if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
 end
-setenv RUSTC_WRAPPER $HOME/.cargo/bin/sccache
-setenv CARGO_INCREMENTAL 0  # required by sccache
 
 # c and cpp
 if [ $CPU = "arm" ]

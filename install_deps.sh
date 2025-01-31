@@ -12,6 +12,7 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    brew install gnupg
     brew install fish
     brew install eza
     brew install neovim --HEAD
@@ -26,11 +27,6 @@ if [ "$(uname)" == "Darwin" ]; then
     brew install zoxide
     brew install procs
     brew install xh
-    # install useful key bindings and fuzzy completion for fzf
-    $(brew --prefix)/opt/fzf/install
-    if [ "$CPU" != "arm" ]; then
-        echo "\"~/.config/fish/functions/fzf_key_bindings.fish\" symlink might be broken for non Apple Silicon platforms. Please refer to fzf docs to replace."
-    fi
     # set fish as default shell
     if [ "$CPU" == "arm" ]; then
         echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
@@ -73,4 +69,3 @@ cargo install cargo-update
 cargo install cargo-edit
 cargo install flamegraph
 cargo install mdbook
-cargo install sccache

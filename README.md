@@ -6,7 +6,7 @@ Pull the repository, optionally install package dependencies `./install_deps.sh`
 git clone https://github.com/lucas-schuermann/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install_deps.sh
-stow cargo curl fish git neovim
+stow cargo curl fish git gpg neovim vscode
 ```
 
 Periodically update dependencies with `./update_deps.sh`.

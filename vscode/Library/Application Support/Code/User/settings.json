@@ -6,7 +6,6 @@
     "editor.folding": false,
     "editor.renderControlCharacters": true,
     "editor.tabCompletion": "on",
-    "editor.formatOnSave": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.suggest.showStatusBar": true,
     "files.maxMemoryForLargeFilesMB": 8192,
@@ -16,7 +15,6 @@
     "workbench.preferredLightColorTheme": "Dracula",
     "workbench.tips.enabled": false,
     "workbench.editor.limit.value": 25,
-    "workbench.settings.enableNaturalLanguageSearch": false,
     "window.autoDetectHighContrast": false,
     "terminal.external.osxExec": "iTerm.app",
     "update.showReleaseNotes": false,
@@ -26,39 +24,11 @@
     "gulp.autoDetect": "off",
     "jake.autoDetect": "off",
     "explorer.confirmDelete": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
     "settingsSync.keybindingsPerPlatform": false,
-    "C_Cpp.intelliSenseMemoryLimit": 8192,
-    "python.jediMemoryLimit": 8192,
-    "python.analysis.memory.keepLibraryAst": true,
     "editor.smoothScrolling": true,
     "editor.scrollBeyondLastLine": false,
     "workbench.list.smoothScrolling": true,
-    "terminal.integrated.scrollback": 100000,
-    "python.formatting.provider": "black",
-    "python.linting.mypyEnabled": true,
-    "python.linting.prospectorEnabled": true,
-    "python.defaultInterpreterPath": "python3",
-    "python.pythonPath": "python3",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "python.experiments.enabled": false,
-    "python.linting.prospectorArgs": [
-        "--strictness=low"
-    ],
     "security.workspace.trust.untrustedFiles": "open",
-    "svelte.enable-ts-plugin": true,
-    "git.confirmSync": false,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "python.showStartPage": false,
-    "svelte.plugin.svelte.format.config.svelteStrictMode": true,
-    "[svelte]": {
-        "editor.defaultFormatter": "svelte.svelte-vscode"
-    },
     "docker.showStartPage": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.hover.delay": 150,
@@ -70,73 +40,23 @@
     "debug.console.closeOnEnd": true,
     "debug.toolBarLocation": "docked",
     "keyboard.touchbar.enabled": false,
-    "crates.errorDecorator": "❗️",
     "rust-analyzer.debug.openDebugPane": true,
     "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
-    "rust-analyzer.lens.methodReferences": true,
-    "html.format.templating": true,
-    "workbench.colorTheme": "Dracula",
-    "workbench.preferredDarkColorTheme": "Dracula",
-    "files.associations": {
-        "*.hcl": "terragrunt"
-    },
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.gpuAcceleration": "on",
     "rust-analyzer.imports.granularity.enforce": true,
     "rust-analyzer.hover.actions.references.enable": true,
-    "rust-analyzer.lru.capacity": 1024,
-    "svelte.plugin.svelte.note-new-transformation": false,
-    "python.analysis.typeCheckingMode": "basic",
-    "prettier.trailingComma": "all",
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "cSpell.userWords": [
-        "Schuermann",
-        "substeps"
-    ],
+    "html.format.templating": true,
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.gpuAcceleration": "on",
     "solidity.telemetry": false,
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
-        "markdown": true,
         "scminput": false,
-        "yaml": true
     },
     "editor.inlineSuggest.enabled": true,
     "lldb.suppressUpdateNotifications": true,
-    "rust-analyzer.assist.emitMustUse": true,
-    "rust-analyzer.diagnostics.experimental.enable": true,
-    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
-    "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
-    "rust-analyzer.inlayHints.discriminantHints.enable": "fieldless",
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[markdown]": {
-        "editor.unicodeHighlight.ambiguousCharacters": false,
-        "editor.unicodeHighlight.invisibleCharacters": false,
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.wordWrap": "on",
-        "editor.quickSuggestions": {
-            "comments": "off",
-            "strings": "off",
-            "other": "off"
-        },
-        "cSpell.fixSpellingWithRenameProvider": true,
-        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
-        "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
-    },
     "workbench.editor.empty.hint": "hidden",
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "github.copilot.editor.enableAutoCompletions": true
+    "chat.commandCenter.enabled": false
 }
