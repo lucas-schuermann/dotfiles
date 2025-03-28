@@ -10,6 +10,10 @@ if [ "$(uname)" == "Darwin" ]; then
     else
         echo "Configuring for x84_64 platform"
     fi
+    # to avoid icloud sync issues
+    mkdir -p "$HOME/.cache.nosync/homebrew"
+    mv "$HOME/Library/Caches/Homebrew" "$HOME/.cache.nosync/homebrew"
+    ln -s "$HOME/.cache.nosync/homebrew" "$HOME/Library/Caches/Homebrew"
     # install config deps
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     brew install gnupg

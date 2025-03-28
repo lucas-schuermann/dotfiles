@@ -118,6 +118,9 @@ fish_add_path $HOME/.cargo/bin
 if [ $CPU = "arm" ]
     set -x DYLD_FALLBACK_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_FALLBACK_LIBRARY_PATH
 end
+if [ (uname) = "Darwin" ]
+    set -x CARGO_TARGET_DIR $HOME/.cache.nosync/cargo-target
+end
 
 # c and cpp
 if [ $CPU = "arm" ]
@@ -127,6 +130,12 @@ if [ $CPU = "arm" ]
     fish_add_path '/opt/homebrew/opt/llvm/bin'
 else
     fish_add_path '/usr/local/opt/llvm/bin'
+end
+
+# other language configs for icloud
+if [ (uname) = "Darwin" ]
+    set NPM_CONFIG_CACHE $HOME/.cache.nosync/npm-cache
+    set PIP_CACHE_DIR $HOME/.cache.nosync/pip-cache
 end
 
 # zoxide (cd replacement)
